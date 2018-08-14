@@ -6,6 +6,7 @@ The plan will be to run integration tests for desktop via this repository nightl
 
 Plan:
 
+0. Enable this repository on CircleCI
 1. Provide scripts to
   * clone the monorepo locally
   * run the `dist` build for desktop
