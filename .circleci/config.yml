@@ -36,9 +36,13 @@ jobs:
             yarn
             sudo apt install libxtst6 libxss1 libgtk-3-0 -y
             sudo apt install libnss3 libasound2 libgconf-2-4 -y
+
       - run:
           name: Test opening nteract desktop
-          command: yarn test
+          command: |
+            sudo Xvfb :99 -ac &
+            export DISPLAY=:99
+            yarn test
             
 
 
