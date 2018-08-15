@@ -34,7 +34,7 @@ jobs:
           name: Install Dependencies
           command: |
             yarn
-            sudo apt install xvfb libxtst6 libxss1 libgtk2.0-0 -y
+            sudo apt install libxtst6 libxss1 libgtk-3-0 -y
             sudo apt install libnss3 libasound2 libgconf-2-4 -y
       - run:
           name: Test opening nteract desktop
