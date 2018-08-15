@@ -20,10 +20,6 @@ jobs:
       - checkout
 
       - run:
-          name: Install Dependencies
-          command: yarn
-
-      - run:
           name: Install nteract desktop
           command: |
             git clone git@github.com:nteract/nteract.git
@@ -32,7 +28,15 @@ jobs:
             yarn dist
             cd applications/desktop/dist/
             chmod a+x nteract-0.11.6-x86_64.AppImage
-            ./nteract-0.11.6-x86_64.AppImage
+            ./nteract-0.11.6-x86_64.AppImage --appimage-extract
+
+      - run:
+          name: Install Dependencies
+          command: yarn
+      - run:
+          name: Test opening nteract desktop
+          command: yarn test
+            
 
 
 
