@@ -1,0 +1,42 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:8
+      
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
+    working_directory: ~/desktop-integration-tests
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install nteract desktop
+          command: |
+            git clone git@github.com:nteract/nteract.git
+            cd nteract
+            yarn
+            yarn dist
+            cd applications/desktop/dist/
+            chmod a+x nteract-0.11.6-x86_64.AppImage
+            ./nteract-0.11.6-x86_64.AppImage --appimage-extract
+
+      - run:
+          name: Install Dependencies
+          command: yarn
+      - run:
+          name: Test opening nteract desktop
+          command: yarn test
+            
+
+
+

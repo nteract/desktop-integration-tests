@@ -1,0 +1,27 @@
+{
+  "name": "desktop-integration-tests",
+  "version": "0.1.0",
+  "description": "Running integration tests for the nteract desktop application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nteract/desktop-integration-tests.git"
+  },
+  "keywords": [
+    "nteract",
+    "desktop",
+    "integration-testing"
+  ],
+  "author": "nteract contributors",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/nteract/desktop-integration-tests/issues"
+  },
+  "homepage": "https://github.com/nteract/desktop-integration-tests#readme",
+  "devDependencies": {
+    "spectron": "^3.8.0"
+  }
+}
