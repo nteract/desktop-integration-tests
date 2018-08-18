@@ -31,6 +31,9 @@ app
     // Stop the application
     return app.stop();
   })
+  .then(function() {
+    console.log("Success!");
+  })
   .catch(function(error) {
     // Log any failures
     console.error("Test failed", error.message);
