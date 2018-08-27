@@ -30,7 +30,6 @@ jobs:
             cd applications/desktop/dist/
             chmod a+x nteract-0.11.6-x86_64.AppImage
             ./nteract-0.11.6-x86_64.AppImage --appimage-extract
-            cd ..
 
       - run:
           name: Install Dependencies

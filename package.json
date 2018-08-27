@@ -4,7 +4,7 @@
   "description": "Running integration tests for the nteract desktop application.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --forceExit"
+    "test": "jest --forceExit __tests__"
   },
   "repository": {
     "type": "git",
