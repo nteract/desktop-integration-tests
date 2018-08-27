@@ -2,8 +2,9 @@ const Application = require("spectron").Application;
 const assert = require("assert");
 const path = require("path");
 const appPath = "nteract/applications/desktop/dist/squashfs-root";
-const clearNotebookPath = "notebooks/python-example.ipynb";
-const executedNotebookPath = "notebooks/python-example-executed.ipynb";
+
+const clearNotebookPath = "notebooks/node-example.ipynb";
+const executedNotebookPath = "notebooks/node-example-executed.ipynb";
 
 const delay = time => new Promise(resolve => setTimeout(resolve, time));
 
