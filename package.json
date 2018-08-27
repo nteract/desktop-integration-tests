@@ -2,9 +2,8 @@
   "name": "desktop-integration-tests",
   "version": "0.1.0",
   "description": "Running integration tests for the nteract desktop application.",
-  "main": "index.js",
   "scripts": {
-    "test": "jest --forceExit __tests__"
+    "test": "jest --forceExit __tests__/integration.js"
   },
   "repository": {
     "type": "git",
