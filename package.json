@@ -4,7 +4,7 @@
   "description": "Running integration tests for the nteract desktop application.",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/nteract/desktop-integration-tests#readme",
   "devDependencies": {
+    "jest": "^23.5.0",
     "spectron": "^3.8.0"
   }
 }
