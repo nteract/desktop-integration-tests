@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`snap it takes a snap, baby 1`] = `
+exports[`tests jest snapshots of executed notebooks tests clear all-cells 1`] = `
 Object {
   "cells": Array [
     Object {
@@ -76,7 +76,7 @@ Object {
 }
 `;
 
-exports[`snap it takes another snap, baby 1`] = `
+exports[`tests jest snapshots of executed notebooks tests run-all-cells 1`] = `
 Object {
   "cells": Array [
     Object {
