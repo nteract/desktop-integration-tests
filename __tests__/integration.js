@@ -2,8 +2,8 @@ const Application = require("spectron").Application;
 const assert = require("assert");
 const path = require("path");
 const fs = require("fs");
-const appPath = "nteract/applications/desktop/dist/squashfs-root/nteract";
 
+const appPath = "nteract/applications/desktop/dist/squashfs-root/nteract";
 const cleanNotebookPath = "notebooks/node-example.ipynb";
 const executedNotebookPath = "notebooks/node-example-executed.ipynb";
 
@@ -11,16 +11,12 @@ const delay = time => new Promise(resolve => setTimeout(resolve, time));
 
 jest.setTimeout(15000);
 
-let i = 0;
 let nextTestNb = executedNotebookPath;
 describe("Testing notebook actions in python with dirty notebook", () => {
   beforeEach(() => {
-    i += 1;
-    const newNotebook = `notebooks/notebook${i}.ipynb`;
-    fs.createReadStream(nextTestNb).pipe(fs.createWriteStream(newNotebook));
     app = new Application({
       path: appPath,
-      args: [newNotebook]
+      args: [nextTestNb]
     });
     return app.start();
   });
@@ -36,7 +32,8 @@ describe("Testing notebook actions in python with dirty notebook", () => {
     await delay(12000);
     await app.client.windowByIndex(0);
     await app.browserWindow.send("menu:clear-all");
-    await app.browserWindow.send("menu:save");
+    await app.browserWindow.send("menu:save-as", "notebooks/clear-all.ipynb");
+    // Setting the path for the starting notebook for the next test. Inelegant for sure, but it works ¯\_(ツ)_/¯
     nextTestNb = cleanNotebookPath;
   });
 
@@ -44,19 +41,19 @@ describe("Testing notebook actions in python with dirty notebook", () => {
     await delay(12000);
     await app.client.windowByIndex(0);
     await app.browserWindow.send("menu:run-all");
-    await app.browserWindow.send("menu:save");
+    await app.browserWindow.send("menu:save-as", "notebooks/run-all.ipynb");
   });
 });
 
 describe("tests jest snapshots of executed notebooks", () => {
   it("tests clear all-cells", () => {
-    const nbPath = `notebooks/notebook1.ipynb`;
+    const nbPath = "notebooks/clear-all.ipynb";
     const nb = JSON.parse(fs.readFileSync(nbPath));
     expect(nb).toMatchSnapshot();
   });
 
   it("tests run-all-cells", () => {
-    const nbPath = `notebooks/notebook2.ipynb`;
+    const nbPath = "notebooks/run-all.ipynb";
     const nb = JSON.parse(fs.readFileSync(nbPath));
     expect(nb).toMatchSnapshot();
   });
