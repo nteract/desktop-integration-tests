@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snap it takes a snap, baby 1`] = `
+Object {
+  "cells": Array [
+    Object {
+      "cell_type": "markdown",
+      "metadata": Object {},
+      "source": Array [
+        "# Dirty cells",
+      ],
+    },
+    Object {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": Object {
+        "collapsed": false,
+        "inputHidden": false,
+        "outputHidden": false,
+      },
+      "outputs": Array [],
+      "source": Array [
+        "console.log(\\"3 + 4\\")",
+      ],
+    },
+    Object {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": Object {
+        "collapsed": false,
+        "inputHidden": false,
+        "outputHidden": false,
+      },
+      "outputs": Array [],
+      "source": Array [
+        "for (var i = 0; i < 100; i++) {
+",
+        "    console.log(i)
+",
+        "}",
+      ],
+    },
+    Object {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": Object {
+        "collapsed": false,
+        "inputHidden": false,
+        "outputHidden": false,
+      },
+      "outputs": Array [],
+      "source": Array [],
+    },
+  ],
+  "metadata": Object {
+    "kernel_info": Object {
+      "name": "node_nteract",
+    },
+    "kernelspec": Object {
+      "display_name": "Node.js (nteract)",
+      "language": "javascript",
+      "name": "node_nteract",
+    },
+    "language_info": Object {
+      "file_extension": ".js",
+      "mimetype": "application/javascript",
+      "name": "javascript",
+      "version": "8.9.3",
+    },
+    "nteract": Object {
+      "version": "0.11.6",
+    },
+  },
+  "nbformat": 4,
+  "nbformat_minor": 4,
+}
+`;
+
+exports[`snap it takes another snap, baby 1`] = `
+Object {
+  "cells": Array [
+    Object {
+      "cell_type": "markdown",
+      "metadata": Object {},
+      "source": Array [
+        "# Clean cells",
+      ],
+    },
+    Object {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": Object {
+        "collapsed": false,
+        "inputHidden": false,
+        "outputHidden": false,
+      },
+      "outputs": Array [
+        Object {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": Array [
+            "3 + 4
+",
+          ],
+        },
+      ],
+      "source": Array [
+        "console.log(\\"3 + 4\\")",
+      ],
+    },
+    Object {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": Object {
+        "collapsed": false,
+        "inputHidden": false,
+        "outputHidden": false,
+      },
+      "outputs": Array [
+        Object {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": Array [
+            "0
+",
+            "1
+",
+            "2
+",
+            "3
+",
+            "4
+",
+            "5
+",
+            "6
+",
+            "7
+",
+            "8
+",
+            "9
+",
+            "10
+",
+            "11
+",
+            "12
+",
+            "13
+",
+            "14
+",
+            "15
+",
+            "16
+",
+            "17
+",
+            "18
+",
+            "19
+",
+            "20
+",
+            "21
+",
+            "22
+",
+            "23
+",
+            "24
+",
+            "25
+",
+            "26
+",
+            "27
+",
+            "28
+",
+            "29
+",
+            "30
+",
+            "31
+",
+            "32
+",
+            "33
+",
+            "34
+",
+            "35
+",
+            "36
+",
+            "37
+",
+            "38
+",
+            "39
+",
+            "40
+",
+            "41
+",
+            "42
+",
+            "43
+",
+            "44
+",
+            "45
+",
+            "46
+",
+            "47
+",
+            "48
+",
+            "49
+",
+            "50
+",
+            "51
+",
+            "52
+",
+            "53
+",
+            "54
+",
+            "55
+",
+            "56
+",
+            "57
+",
+            "58
+",
+            "59
+",
+            "60
+",
+            "61
+",
+            "62
+",
+            "63
+",
+            "64
+",
+            "65
+",
+            "66
+",
+            "67
+",
+            "68
+",
+            "69
+",
+            "70
+",
+            "71
+",
+            "72
+",
+            "73
+",
+            "74
+",
+            "75
+",
+            "76
+",
+            "77
+",
+            "78
+",
+            "79
+",
+            "80
+",
+            "81
+",
+            "82
+",
+            "83
+",
+            "84
+",
+            "85
+",
+            "86
+",
+            "87
+",
+            "88
+",
+            "89
+",
+            "90
+",
+            "91
+",
+            "92
+",
+            "93
+",
+            "94
+",
+            "95
+",
+            "96
+",
+            "97
+",
+            "98
+",
+            "99
+",
+          ],
+        },
+      ],
+      "source": Array [
+        "for (var i = 0; i < 100; i++) {
+",
+        "    console.log(i)
+",
+        "}",
+      ],
+    },
+    Object {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": Object {
+        "collapsed": false,
+        "inputHidden": false,
+        "outputHidden": false,
+      },
+      "outputs": Array [],
+      "source": Array [],
+    },
+  ],
+  "metadata": Object {
+    "kernel_info": Object {
+      "name": "node_nteract",
+    },
+    "kernelspec": Object {
+      "display_name": "Node.js (nteract)",
+      "language": "javascript",
+      "name": "node_nteract",
+    },
+    "language_info": Object {
+      "file_extension": ".js",
+      "mimetype": "application/javascript",
+      "name": "javascript",
+      "version": "8.9.3",
+    },
+    "nteract": Object {
+      "version": "0.11.6",
+    },
+  },
+  "nbformat": 4,
+  "nbformat_minor": 4,
+}
+`;
