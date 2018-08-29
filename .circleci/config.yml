@@ -39,7 +39,22 @@ jobs:
           name: Test opening nteract desktop
           command: |
             yarn test
-            
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build
 
 
 
