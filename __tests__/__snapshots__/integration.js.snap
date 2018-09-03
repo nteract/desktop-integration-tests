@@ -76,6 +76,100 @@ Object {
 }
 `;
 
+exports[`tests jest snapshots of executed notebooks tests new-code-cells 1`] = `
+Object {
+  "cells": Array [
+    Object {
+      "cell_type": "markdown",
+      "metadata": Object {
+        "collapsed": false,
+        "inputHidden": false,
+        "outputHidden": false,
+      },
+      "source": Array [
+        "## New Code Cell",
+      ],
+    },
+    Object {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": Object {
+        "collapsed": false,
+        "inputHidden": false,
+        "outputHidden": false,
+      },
+      "outputs": Array [],
+      "source": Array [],
+    },
+  ],
+  "metadata": Object {
+    "kernel_info": Object {
+      "name": "node_nteract",
+    },
+    "kernelspec": Object {
+      "display_name": "Node.js (nteract)",
+      "language": "javascript",
+      "name": "node_nteract",
+    },
+    "language_info": Object {
+      "file_extension": ".js",
+      "mimetype": "application/javascript",
+      "name": "javascript",
+      "version": "8.9.3",
+    },
+    "nteract": Object {
+      "version": "0.11.6",
+    },
+  },
+  "nbformat": 4,
+  "nbformat_minor": 4,
+}
+`;
+
+exports[`tests jest snapshots of executed notebooks tests new-text-cells 1`] = `
+Object {
+  "cells": Array [
+    Object {
+      "cell_type": "markdown",
+      "metadata": Object {
+        "collapsed": false,
+        "inputHidden": false,
+        "outputHidden": false,
+      },
+      "source": Array [
+        "## New Text Cell",
+      ],
+    },
+    Object {
+      "cell_type": "markdown",
+      "metadata": Object {},
+      "source": Array [],
+    },
+  ],
+  "metadata": Object {
+    "kernel_info": Object {
+      "name": "node_nteract",
+    },
+    "kernelspec": Object {
+      "display_name": "Node.js (nteract)",
+      "language": "javascript",
+      "name": "node_nteract",
+    },
+    "language_info": Object {
+      "file_extension": ".js",
+      "mimetype": "application/javascript",
+      "name": "javascript",
+      "version": "8.9.3",
+    },
+    "nteract": Object {
+      "version": "0.11.6",
+    },
+  },
+  "nbformat": 4,
+  "nbformat_minor": 4,
+}
+`;
+
 exports[`tests jest snapshots of executed notebooks tests run-all-cells 1`] = `
 Object {
   "cells": Array [
