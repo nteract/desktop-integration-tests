@@ -3,9 +3,7 @@ const assert = require("assert");
 const path = require("path");
 const fs = require("fs");
 
-// const appPath = "nteract/applications/desktop/dist/squashfs-root/nteract";
-const appPath =
-  "/Users/acb/contributing/tt/nteract/applications/desktop/dist/mac/nteract.app/Contents/MacOS/nteract";
+const appPath = "nteract/applications/desktop/dist/squashfs-root/nteract";
 const cleanNotebookPath = "notebooks/node-example.ipynb";
 const executedNotebookPath = "notebooks/node-example-executed.ipynb";
 const newCodeCellNotebookPath = "notebooks/newCodeCell-example.ipynb";
