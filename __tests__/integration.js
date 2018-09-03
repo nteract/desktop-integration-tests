@@ -11,6 +11,7 @@ const executedNotebookPath = "notebooks/node-example-executed.ipynb";
 const newCodeCellNotebookPath = "notebooks/newCodeCell-example.ipynb";
 const newTextCellNotebookPath = "notebooks/newTextCell-example.ipynb";
 const changeThemeDarkNotebookPath = "notebooks/changeThemeDark-example.ipynb";
+const changeThemeLightNotebookPath = "notebooks/changeThemeLight-example.ipynb";
 
 const delay = time => new Promise(resolve => setTimeout(resolve, time));
 
@@ -79,6 +80,14 @@ describe("Testing notebook actions in python with dirty notebook", () => {
     await app.browserWindow.send("menu:save-as", "notebooks/dark-theme.ipynb");
     nextTestNb = changeThemeLightNotebookPath;
   });
+
+  it("Open notebook and changes the theme to light", async () => {
+    await delay(12000);
+    await app.client.windowByIndex(0);
+    await app.browserWindow.send("menu:theme", "light");
+    await app.browserWindow.send("menu:save-as", "notebooks/light-theme.ipynb");
+    nextTestNb = changeThemeLightNotebookPath;
+  });
 });
 
 describe("tests jest snapshots of executed notebooks", () => {
@@ -108,6 +117,12 @@ describe("tests jest snapshots of executed notebooks", () => {
 
   it("tests change theme to dark", () => {
     const nbPath = "notebooks/dark-theme.ipynb";
+    const nb = JSON.parse(fs.readFileSync(nbPath));
+    expect(nb).toMatchSnapshot();
+  });
+
+  it("tests change theme to light", () => {
+    const nbPath = "notebooks/light-theme.ipynb";
     const nb = JSON.parse(fs.readFileSync(nbPath));
     expect(nb).toMatchSnapshot();
   });
