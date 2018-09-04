@@ -1,4 +1,5 @@
 # desktop-integration-tests
+[![CircleCI](https://circleci.com/gh/nteract/desktop-integration-tests.svg?style=svg)](https://circleci.com/gh/nteract/desktop-integration-tests)
 
 Testing nteract for desktop on the regular with a full test suite
 
