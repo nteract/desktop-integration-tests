@@ -21,24 +21,15 @@ jobs:
 
       - run:
           name: Install nteract desktop
-          command: |
-            sudo apt install libgif-dev
-            git clone git@github.com:nteract/nteract.git
-            cd nteract
-            yarn
-            yarn dist
-            cd applications/desktop/dist/
-            chmod a+x nteract-0.11.7-x86_64.AppImage
-            ./nteract-0.11.7-x86_64.AppImage --appimage-extract
+          command: bash scripts/get-nteract.sh
 
       - run:
           name: Install Dependencies
           command: yarn
 
       - run:
-          name: Test opening nteract desktop
-          command: |
-            yarn test
+          name: Test nteract desktop
+          command: yarn test
 
 workflows:
   version: 2
