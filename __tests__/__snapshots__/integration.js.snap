@@ -68,7 +68,7 @@ Object {
       "version": "8.9.3",
     },
     "nteract": Object {
-      "version": "0.11.7",
+      "version": "0.11.8",
     },
   },
   "nbformat": 4,
@@ -118,7 +118,7 @@ Object {
       "version": "8.9.3",
     },
     "nteract": Object {
-      "version": "0.11.7",
+      "version": "0.11.8",
     },
   },
   "nbformat": 4,
@@ -162,7 +162,7 @@ Object {
       "version": "8.9.3",
     },
     "nteract": Object {
-      "version": "0.11.7",
+      "version": "0.11.8",
     },
   },
   "nbformat": 4,
@@ -454,7 +454,7 @@ Object {
       "version": "8.9.3",
     },
     "nteract": Object {
-      "version": "0.11.7",
+      "version": "0.11.8",
     },
   },
   "nbformat": 4,
