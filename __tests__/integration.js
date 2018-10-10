@@ -1,6 +1,4 @@
-const Application = require("spectron").Application;
-const assert = require("assert");
-const path = require("path");
+const { Application } = require("spectron");
 const fs = require("fs");
 
 const appPath = "nteract/applications/desktop/dist/squashfs-root/nteract";
@@ -14,8 +12,8 @@ const delay = time => new Promise(resolve => setTimeout(resolve, time));
 jest.setTimeout(15000);
 
 let nextTestNb = executedNotebookPath;
-describe("Testing notebook actions in python with dirty notebook", () => {
-  beforeEach(() => {
+describe("Testing notebook actions in js with dirty notebook", () => {
+  beforeAll(() => {
     app = new Application({
       path: appPath,
       args: [nextTestNb]
@@ -23,7 +21,7 @@ describe("Testing notebook actions in python with dirty notebook", () => {
     return app.start();
   });
 
-  afterEach(async () => {
+  afterAll(async () => {
     if (app && app.isRunning()) {
       await delay(2000);
       return app.stop();
@@ -38,6 +36,23 @@ describe("Testing notebook actions in python with dirty notebook", () => {
     // Setting the path for the starting notebook for the next test. Inelegant for sure, but it works ¯\_(ツ)_/¯
     nextTestNb = cleanNotebookPath;
   });
+});
+
+describe("Testing notebook actions in js with clean notebook", () => {
+  beforeAll(() => {
+    app = new Application({
+      path: appPath,
+      args: [nextTestNb]
+    });
+    return app.start();
+  });
+
+  afterAll(async () => {
+    if (app && app.isRunning()) {
+      await delay(2000);
+      return app.stop();
+    }
+  });
 
   it("Open clean notebook example, runs all cells", async () => {
     await delay(12000);
@@ -46,7 +61,23 @@ describe("Testing notebook actions in python with dirty notebook", () => {
     await app.browserWindow.send("menu:save-as", "notebooks/run-all.ipynb");
     nextTestNb = newCodeCellNotebookPath;
   });
+});
 
+describe("Testing notebook actions in js with new code cell", () => {
+  beforeAll(() => {
+    app = new Application({
+      path: appPath,
+      args: [nextTestNb]
+    });
+    return app.start();
+  });
+
+  afterAll(async () => {
+    if (app && app.isRunning()) {
+      await delay(2000);
+      return app.stop();
+    }
+  });
   it("Open notebook and adds a new code cell", async () => {
     await delay(12000);
     await app.client.windowByIndex(0);
@@ -57,7 +88,23 @@ describe("Testing notebook actions in python with dirty notebook", () => {
     );
     nextTestNb = newTextCellNotebookPath;
   });
+});
 
+describe("Testing notebook actions in js with new text cell", () => {
+  beforeAll(() => {
+    app = new Application({
+      path: appPath,
+      args: [nextTestNb]
+    });
+    return app.start();
+  });
+
+  afterAll(async () => {
+    if (app && app.isRunning()) {
+      await delay(2000);
+      return app.stop();
+    }
+  });
   it("Open notebook and adds a new text cell", async () => {
     await delay(12000);
     await app.client.windowByIndex(0);
@@ -67,14 +114,46 @@ describe("Testing notebook actions in python with dirty notebook", () => {
       "notebooks/new-text-cell.ipynb"
     );
   });
+});
 
+describe("Testing notebook actions changing theme dark", () => {
+  beforeAll(() => {
+    app = new Application({
+      path: appPath,
+      args: [nextTestNb]
+    });
+    return app.start();
+  });
+
+  afterAll(async () => {
+    if (app && app.isRunning()) {
+      await delay(2000);
+      return app.stop();
+    }
+  });
   it("Open notebook and changes the theme to dark", async () => {
     await delay(12000);
     await app.client.windowByIndex(0);
     await app.browserWindow.send("menu:theme", "dark");
     await app.browserWindow.send("menu:save");
   });
+});
 
+describe("Testing notebook actions changing theme light", () => {
+  beforeAll(() => {
+    app = new Application({
+      path: appPath,
+      args: [nextTestNb]
+    });
+    return app.start();
+  });
+
+  afterAll(async () => {
+    if (app && app.isRunning()) {
+      await delay(2000);
+      return app.stop();
+    }
+  });
   it("Open notebook and changes the theme to light", async () => {
     await delay(12000);
     await app.client.windowByIndex(0);

@@ -65,7 +65,7 @@ Object {
       "file_extension": ".js",
       "mimetype": "application/javascript",
       "name": "javascript",
-      "version": "8.9.3",
+      "version": "10.2.0",
     },
     "nteract": Object {
       "version": "0.11.9",
@@ -115,7 +115,7 @@ Object {
       "file_extension": ".js",
       "mimetype": "application/javascript",
       "name": "javascript",
-      "version": "8.9.3",
+      "version": "10.2.0",
     },
     "nteract": Object {
       "version": "0.11.9",
@@ -159,7 +159,7 @@ Object {
       "file_extension": ".js",
       "mimetype": "application/javascript",
       "name": "javascript",
-      "version": "8.9.3",
+      "version": "10.2.0",
     },
     "nteract": Object {
       "version": "0.11.9",
@@ -451,7 +451,7 @@ Object {
       "file_extension": ".js",
       "mimetype": "application/javascript",
       "name": "javascript",
-      "version": "8.9.3",
+      "version": "10.2.0",
     },
     "nteract": Object {
       "version": "0.11.9",
